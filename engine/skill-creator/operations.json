@@ -1,0 +1,19 @@
+{
+  "schema": "mythos-skills.operations.v1",
+  "operations": [
+    {
+      "name": "validate-principles",
+      "description": "Review a skill against the P1-P8 checklist.",
+      "references": [
+        "references/principles_checklist.md"
+      ]
+    },
+    {
+      "name": "create-skill",
+      "description": "Create a new three-layer skill.",
+      "references": [
+        "references/creation_workflow.md"
+      ]
+    }
+  ]
+}
