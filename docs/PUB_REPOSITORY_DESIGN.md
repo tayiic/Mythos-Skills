@@ -101,6 +101,18 @@ Mythos-Skills turns them into reusable engineering units.
 Famous skill -> Mythos optimized skill -> measurable improvement
 ```
 
+README 证据区要直接列出最著名的 3-5 个 skill，而不是泛泛说“会做对比”。首批可以选：
+
+| 著名 skill | 公开基线 | Mythos 目标 | 冲击点 |
+|---|---:|---:|---|
+| Anthropic `skill-creator` | 485 行 / 32.4 KB | <=55 行入口 | 激活上下文减少约 85-90% |
+| Anthropic `claude-api` | 324 行 / 32.2 KB | <=55 行入口 | 激活上下文减少约 80-88% |
+| Anthropic `xlsx` | 292 行 / 11.2 KB | <=55 行入口 | 激活上下文减少约 70-82% |
+| Superpowers `systematic-debugging` | 长 workflow 文件 | <=55 行入口 | 更快触发，保留根因纪律 |
+| Superpowers `test-driven-development` | 长 workflow 文件 | <=55 行入口 | 更快触发，保留 TDD 铁律 |
+
+注意：在优化案例真正落地前，这些只能标记为目标/benchmark board，不能写成已完成收益。最终对外 claim 必须来自 `gallery/famous/.../BENCHMARK.md`。
+
 ### 5.2 最值得大力宣传的优点
 
 优先级从高到低：
@@ -122,6 +134,42 @@ Famous skill -> Mythos optimized skill -> measurable improvement
 | Awesome Agent Skills 中的热门技能 | 浏览器、文档、测试、部署类 | 用户容易理解收益 |
 
 不要一开始铺 20 个。先做 3 个精品案例，每个案例要有图文对比。
+
+但可以提前公布第一批候选清单，让用户感受到项目野心。推荐第一批 10-20 个放在：
+
+```text
+pub/gallery/famous/<source-slug>/<skill-slug>/
+```
+
+每个目录必须包含：
+
+```text
+ORIGINAL.md
+SKILL.md
+DIFF.md
+BENCHMARK.md
+references/
+operations.json
+```
+
+首批候选：
+
+| 优先级 | 来源 | Skill |
+|---:|---|---|
+| 1 | Anthropic | `skill-creator` |
+| 2 | Anthropic | `claude-api` |
+| 3 | Anthropic | `xlsx` |
+| 4 | Anthropic | `pptx` |
+| 5 | Anthropic | `pdf` |
+| 6 | Anthropic | `docx` |
+| 7 | Superpowers | `systematic-debugging` |
+| 8 | Superpowers | `test-driven-development` |
+| 9 | Superpowers | `writing-plans` |
+| 10 | Superpowers | `requesting-code-review` |
+| 11 | Superpowers | `brainstorming` |
+| 12 | Superpowers | `verification-before-completion` |
+| 13 | Playwright Skill | browser automation |
+| 14-20 | Awesome Agent Skills | frontend/design/deploy/Supabase/Stripe/Cloudflare/Sentry/Figma 等 |
 
 ### 5.4 图文比较格式
 
@@ -196,6 +244,36 @@ Languages: English | 简体中文
 - P1-P8 如何约束 Agent。
 - 这个仓库怎么帮你写自己的 skill。
 - gallery 如何证明优化效果。
+
+新增语言版本建议：
+
+```text
+README.md        # English
+README.zh-CN.md  # 简体中文
+README.ja.md     # 日本語
+README.ko.md     # 한국어
+README.es.md     # Español
+```
+
+日/韩/西可以先做短版入口，重点放在定位、证据、快速开始和 gallery 路径。等项目稳定后再扩展成完整翻译。
+
+## 6.1 极简入口策略
+
+项目本身会变复杂，但用户入口必须极简。借鉴 Karpathy-style minimalism，额外提供一个单文件版本：
+
+```text
+pub/engine/skill-creator-lite/SKILL.md
+```
+
+三个使用层级：
+
+| 模式 | 拷贝什么 | 适合场景 |
+|---|---|---|
+| Lite | `engine/skill-creator-lite/SKILL.md` | 单文件、最小心智负担 |
+| Standard | `engine/skill-creator/` | 完整 P1-P8 创建流程 |
+| Famous gallery | `gallery/famous/<source>/<skill>/` | 直接用优化后的著名 skill |
+
+这能解决“仓库看起来太复杂”的问题：深度留给进阶用户，入口保持一个文件就能开始。
 
 ## 7. 发布顺序
 
