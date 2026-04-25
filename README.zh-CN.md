@@ -2,7 +2,7 @@
 
 > 面向 AI Agent 的下一层能力：Skill Engineering。
 
-语言：[English](README.md) | [简体中文](README.zh-CN.md)
+语言：[English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Español](README.es.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/tayiic/Mythos-Skills?style=social)](https://github.com/tayiic/Mythos-Skills/stargazers)
@@ -21,17 +21,29 @@ Mythos-Skills 的核心判断是：
 
 ## 先看证据
 
-这个项目最重要的卖点不是口号，而是可验证优化。
+这个项目最重要的卖点不是口号，而是可验证优化。首批 gallery 会瞄准最有名、最容易被用户理解的 skills，把优化前后的数据直接摆出来。
 
-首批 gallery 会优先选择知名或高频复制的 skills，用 Mythos-Skills 的 P1-P8 原则重构，然后展示明确差异：
+| 著名 skill | 公开基线 | Mythos 目标 | 要证明的提升 |
+|---|---:|---:|---|
+| Anthropic `skill-creator` | 485 行 / 32.4 KB | <=55 行入口 | 激活上下文减少约 85-90% |
+| Anthropic `claude-api` | 324 行 / 32.2 KB | <=55 行入口 | 激活上下文减少约 80-88% |
+| Anthropic `xlsx` | 292 行 / 11.2 KB | <=55 行入口 | 激活上下文减少约 70-82% |
+| Superpowers `systematic-debugging` | 长 workflow 文件 | <=55 行入口 | 更快触发，保留根因纪律 |
+| Superpowers `test-driven-development` | 长 workflow 文件 | <=55 行入口 | 更快触发，保留 TDD 铁律 |
 
-| 案例 | 优化前 | 优化后 | 证明方式 |
-|---|---|---|---|
-| TDD workflow | 激活文件过长，流程和细节混在一起 | 入口层压缩，细节进入 references | 行数和 token 估算 |
-| Debugging workflow | 存在隐含跨 skill 依赖 | 自包含 skill 包 | 可迁移检查清单 |
-| Planning workflow | 描述偏“做什么” | 改成触发优先的 description | 触发质量 rubric |
+完整数据板见 [BENCHMARKS.md](BENCHMARKS.md)。每个案例都应该包含 `ORIGINAL.md`、优化后的 `SKILL.md`、`DIFF.md`、本地 `references/` 和 benchmark notes。gallery 是这个项目建立信任的地方。
 
-每个案例都应该包含 `ORIGINAL.md`、优化后的 `SKILL.md`、`DIFF.md`、本地 `references/` 和提升表。gallery 是这个项目建立信任的地方。
+## 太复杂？直接用极简版
+
+你不需要一次理解整个仓库。
+
+| 模式 | 拷贝什么 | 适合谁 |
+|---|---|---|
+| Lite | `engine/skill-creator-lite/SKILL.md` | 想要卡帕西式极简，一个文件先用起来 |
+| Standard | `engine/skill-creator/` | 想完整使用 P1-P8 创建流程 |
+| Gallery | `gallery/famous/<source>/<skill>/` | 想直接用优化后的著名 skill |
+
+仓库可以很深，但入口必须很小。
 
 ## 为什么需要它
 
@@ -121,6 +133,13 @@ Use skill-creator to design a production-grade skill for my workflow.
 
 它会按 P1-P8 引导设计，而不是让 agent 自由发挥。
 
+极简单文件模式：
+
+```bash
+mkdir -p .codex/skills/skill-creator-lite
+cp engine/skill-creator-lite/SKILL.md .codex/skills/skill-creator-lite/SKILL.md
+```
+
 ## Gallery: 优化前后对比
 
 gallery 是这个项目的证明面。优先优化知名或被广泛复制的 skills，因为用户能更快理解对比价值。
@@ -134,6 +153,8 @@ gallery 是这个项目的证明面。优先优化知名或被广泛复制的 sk
 - `operations.json`：必要时提供机器可读操作索引。
 
 目标不是宣称神奇提升，而是展示更少激活上下文、更清晰触发、更少隐藏依赖、更好的失败模式覆盖。
+
+优化后的著名 skill 放在 `gallery/famous/<source-slug>/<skill-slug>/`。首批 10-20 个候选见 [GALLERY_PLAN.md](GALLERY_PLAN.md)。
 
 ## 支持范围
 

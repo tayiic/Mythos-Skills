@@ -2,6 +2,28 @@
 
 The gallery shows how skills improve when rewritten through P1-P8.
 
+## Where Optimized Famous Skills Go
+
+Use this path for the first batch of famous skills:
+
+```text
+gallery/famous/<source-slug>/<skill-slug>/
+|-- ORIGINAL.md
+|-- SKILL.md
+|-- DIFF.md
+|-- BENCHMARK.md
+|-- references/
+`-- operations.json
+```
+
+Examples:
+
+```text
+gallery/famous/anthropic/skill-creator/
+gallery/famous/anthropic/claude-api/
+gallery/famous/superpowers/systematic-debugging/
+```
+
 Each optimized skill should be reviewable:
 
 ```text

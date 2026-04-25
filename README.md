@@ -2,7 +2,7 @@
 
 > The next layer of AI agent work: skill engineering.
 
-Languages: [English](README.md) | [简体中文](README.zh-CN.md)
+Languages: [English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Español](README.es.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/tayiic/Mythos-Skills?style=social)](https://github.com/tayiic/Mythos-Skills/stargazers)
@@ -21,15 +21,31 @@ This repository distills that idea into 8 iron principles, a principle-driven cr
 
 ## Show Me The Proof
 
-The core promise is measurable improvement, not nicer wording. The first gallery entries will optimize well-known skills and show the exact delta:
+The core promise is measurable improvement, not nicer wording. The first gallery entries target famous skills and show the exact delta.
 
-| Case | Before | After | Proof |
-|---|---|---|---|
-| TDD workflow | Long activation file, mixed process and detail | Compact trigger layer plus references | Activation lines and token estimate |
-| Debugging workflow | Hidden cross-skill assumptions | Self-contained package | Portability checklist |
-| Planning workflow | Generic "what it does" description | Trigger-first description | Activation rubric |
+| Famous skill | Public baseline | Mythos target | Impact to prove |
+|---|---:|---:|---|
+| Anthropic `skill-creator` | 485 lines / 32.4 KB | <=55-line entry | ~85-90% less activation context |
+| Anthropic `claude-api` | 324 lines / 32.2 KB | <=55-line entry | ~80-88% less activation context |
+| Anthropic `xlsx` | 292 lines / 11.2 KB | <=55-line entry | ~70-82% less activation context |
+| Superpowers `systematic-debugging` | Long workflow file | <=55-line entry | Faster trigger, same root-cause discipline |
+| Superpowers `test-driven-development` | Long workflow file | <=55-line entry | Faster trigger, same TDD enforcement |
 
-Each case should include `ORIGINAL.md`, optimized `SKILL.md`, `DIFF.md`, local `references/`, and an improvement table. The gallery is where Mythos-Skills earns trust.
+See [BENCHMARKS.md](BENCHMARKS.md) for the measurement board. Each case must include `ORIGINAL.md`, optimized `SKILL.md`, `DIFF.md`, local `references/`, and benchmark notes. The gallery is where Mythos-Skills earns trust.
+
+## Complexity Escape Hatch
+
+You do not need to adopt the whole repository.
+
+Use the smallest layer that helps:
+
+| Mode | What to copy | Best for |
+|---|---|---|
+| Lite | `engine/skill-creator-lite/SKILL.md` | One-file method, Karpathy-style minimalism |
+| Standard | `engine/skill-creator/` | Full P1-P8 workflow with references |
+| Gallery | `gallery/famous/<source>/<skill>/` | Drop-in optimized famous skills |
+
+The repository can be deep. The starting point should be tiny.
 
 ## Why This Exists
 
@@ -121,6 +137,13 @@ Use skill-creator to design a production-grade skill for my workflow.
 
 The engine should guide the skill through P1-P8 instead of leaving the agent to improvise.
 
+Minimal one-file mode:
+
+```bash
+mkdir -p .codex/skills/skill-creator-lite
+cp engine/skill-creator-lite/SKILL.md .codex/skills/skill-creator-lite/SKILL.md
+```
+
 ## Gallery: Before To After
 
 The gallery is the proof surface. It is intentionally designed for famous or widely copied skills first, because trust grows faster when the comparison is recognizable.
@@ -137,11 +160,13 @@ This makes optimization reviewable instead of vibes-based.
 
 Recommended first cases:
 
-- A TDD workflow skill.
-- A systematic debugging skill.
-- A planning or implementation workflow skill.
+- Anthropic `skill-creator`, `claude-api`, `xlsx`, `pptx`, `pdf`.
+- Superpowers `systematic-debugging`, `test-driven-development`, `writing-plans`, `requesting-code-review`, `brainstorming`.
+- Playwright/browser automation and other widely copied practical skills.
 
 The goal is not to claim magic. The goal is to show smaller activation context, clearer triggers, fewer hidden dependencies, and better failure-mode coverage.
+
+Optimized famous skills belong in `gallery/famous/<source-slug>/<skill-slug>/`. See [GALLERY_PLAN.md](GALLERY_PLAN.md).
 
 ## Works With
 
