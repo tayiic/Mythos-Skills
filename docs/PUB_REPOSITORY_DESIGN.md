@@ -370,3 +370,164 @@ v002 README 末尾新增快速链接：
 - 所有 `SKILL.md` <= 55 行。
 - 所有 `operations.json` 可解析。
 - 每个 famous package 有 `ORIGINAL.md`, `SKILL.md`, `DIFF.md`, `BENCHMARK.md`, `operations.json`。
+
+## 11. 专家采用视角
+
+从顶尖团队视角，这个项目要更有吸引力，不能只像一个内容仓库，必须更像一个可验证标准。
+
+最关键的增强点：
+
+1. **公开 eval harness**
+   用少量标准任务验证优化前后是否出现速度、质量、触发偏差、行为偏差。
+2. **平台兼容矩阵**
+   明确每个 famous skill 在 Claude Code、Codex、Cursor、Gemini CLI、GitHub Copilot 中的验证状态。
+3. **方法论白皮书**
+   把 P1-P8 + non-regression benchmark 变成一套更像“agent skill engineering standard”的公开文档。
+4. **真实案例研究**
+   选 2-3 个最著名 skill 做深入 case study，而不是只给精简版。
+5. **版本化发布**
+   每次 famous skill gallery 增量更新时都配 release note，让团队更容易跟踪。
+
+专家真正想看到的不是“你优化了多少行”，而是：
+
+- 能力是否保持
+- 触发是否更准
+- 运行是否更稳
+- 是否能跨平台复用
+- 是否有法律/许可风险
+
+## 12. 大众传播视角
+
+普通程序员和白领才是最大盘。对他们来说，最有杀伤力的不是“理论更高阶”，而是“今天就能少踩坑”。
+
+推荐用这些痛点表达：
+
+- AI 老是忘记规则
+- prompt 太长又贵又慢
+- copied skill 一复制就坏
+- agent 经常触发错 workflow
+- 不知道哪些 skill 真值得信
+
+README、帖子、短文、X 线程都应该反复围绕：
+
+```text
+smaller context
+fewer hidden dependencies
+better triggering
+benchmark-backed optimization
+works across Claude Code / Codex / Cursor / Gemini CLI
+```
+
+中文可重复使用：
+
+```text
+更少上下文消耗
+更少隐藏依赖
+更准触发
+有 benchmark 支撑
+跨 Claude Code / Codex / Cursor / Gemini CLI 可用
+```
+
+## 13. GitHub 搜索与推荐机制
+
+基于 GitHub 官方文档，跟本项目最相关的事实有：
+
+1. **默认仓库搜索主要看 name、description、topics**
+   这是 GitHub 官方仓库搜索文档明确说明的。
+2. **README 内容只有在 `in:readme` 这类搜索下才直接参与仓库搜索**
+   所以 README 重要，但真正的搜索权重第一层不在 README，而在仓库名、描述、topics。
+3. **topics 可以直接帮助被发现**
+   GitHub 官方说明 topic 会用于浏览和搜索，并且 GitHub 会根据公开内容建议 topics。
+4. **stars 会影响很多仓库排名，Explore GitHub 会展示基于 stars 的热门仓库**
+   这是 GitHub 官方 stars 文档明确说的。
+5. **social preview 会提升外链传播识别度**
+   GitHub 官方建议为仓库设置社交预览图。
+
+### 13.1 对 Mythos-Skills 最重要的元数据
+
+仓库描述建议：
+
+```text
+Benchmark-driven skill engineering for Claude Code, Codex, Cursor, and Gemini CLI. Optimize famous agent skills for lower context cost without capability regression.
+```
+
+推荐 topics，控制在 12-20 个以内：
+
+```text
+agent-skills
+ai-agents
+claude-code
+codex
+cursor
+gemini-cli
+github-copilot
+context-engineering
+prompt-engineering
+software-engineering
+developer-tools
+workflow-automation
+benchmarking
+ai-workflows
+claude-skills
+codex-skills
+cursor-skills
+gemini-skills
+```
+
+### 13.2 README 关键词策略
+
+README 应该自然覆盖关键词，但不要生硬堆砌。重点词建议分散到：
+
+- 标题副标题
+- 首屏价值主张
+- Works With
+- Quick Links
+- Benchmarks
+
+最重要的词组：
+
+- agent skills
+- Claude Code skills
+- Codex skills
+- Cursor skills
+- Gemini CLI skills
+- benchmark-driven
+- context engineering
+- prompt engineering
+- AI coding workflow
+- non-regression
+
+### 13.3 如何借热点
+
+不是碰瓷，而是站在热点交叉点：
+
+- 用 famous skill baselines：Anthropic、Superpowers、VoltAgent Awesome Agent Skills
+- 用兼容矩阵蹭平台热度：Claude Code、Codex、Cursor、Gemini CLI、GitHub Copilot
+- 用“对标式标题”蹭认知流量：`skill-creator`, `claude-api`, `xlsx`, `systematic-debugging`, `test-driven-development`
+- 争取进入 curated lists 和 awesome lists
+- 争取被大仓库 maintainer 或活跃贡献者引用
+
+### 13.4 快速变热门的现实路径
+
+GitHub 没有公开完整 Trending 算法，所以这里是基于官方文档和公开现象的推断：
+
+- star 增速很重要
+- 最近活跃度很重要
+- 热点 topic 和平台兼容词很重要
+- 外部传播带来的短时间集中访问和 star 很重要
+- 可快速消费的 README 和社交图很重要
+
+因此更现实的打法不是“慢慢长”，而是做一次有节奏的首发：
+
+1. 用 3 个最强案例把首页打透。
+2. 发 1 篇英文长帖：围绕 `I audited hundreds of AI agent skills...`
+3. 发 1 篇中文长帖：围绕“坏 skill 为什么总死在这几个问题上”。
+4. 同步投到 Reddit / HN / X / 技术社区。
+5. 尽快争取被 awesome list、技能导航站、agent 生态仓库收录。
+
+### 13.5 不建议做的事
+
+- 不要只靠 README 堆关键词。
+- 不要夸大“性能提升”但没有 eval。
+- 不要在标题里假装自己与大厂官方有关。
+- 不要一开始铺太多 mediocre cases，宁愿少做精品案例。
