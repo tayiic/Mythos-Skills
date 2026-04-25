@@ -323,3 +323,50 @@ P1-P8 定义好 skill。
 skill-creator 让好 skill 可重复生产。
 gallery 证明优化真的有效。
 ```
+
+## 10. v002 落地记录
+
+v002 分支策略：
+
+- `v001` 固化初始开源骨架并推送。
+- `v002` 增加第一批 famous skill gallery、benchmark board、快捷链接。
+- v002 校验通过后合并回 `main` 并推送。
+
+v002 第一批 famous skill packages:
+
+| Source | Count | Packages |
+|---|---:|---|
+| Anthropic | 5 | `skill-creator`, `claude-api`, `xlsx`, `pptx`, `pdf` |
+| Superpowers | 7 | `systematic-debugging`, `test-driven-development`, `writing-plans`, `requesting-code-review`, `brainstorming`, `verification-before-completion`, `using-git-worktrees` |
+
+每个 package 位于：
+
+```text
+pub/gallery/famous/<source-slug>/<skill-slug>/
+```
+
+并包含：
+
+```text
+ORIGINAL.md
+SKILL.md
+DIFF.md
+BENCHMARK.md
+references/
+operations.json
+```
+
+v002 README 末尾新增快速链接：
+
+- 下载全部仓库 zip。
+- 下载 `v002` zip。
+- 直接打开 `skill-creator-lite/SKILL.md`。
+- 打开标准 `engine/skill-creator/`。
+- 打开 famous skill gallery。
+- 打开 benchmark board。
+
+校验要求：
+
+- 所有 `SKILL.md` <= 55 行。
+- 所有 `operations.json` 可解析。
+- 每个 famous package 有 `ORIGINAL.md`, `SKILL.md`, `DIFF.md`, `BENCHMARK.md`, `operations.json`。
