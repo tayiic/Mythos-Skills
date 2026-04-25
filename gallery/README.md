@@ -46,4 +46,4 @@ example-optimized/
 
 ## Current Status
 
-Gallery entries are planned but not imported yet.
+The first famous gallery batch is available at [famous/](famous/).

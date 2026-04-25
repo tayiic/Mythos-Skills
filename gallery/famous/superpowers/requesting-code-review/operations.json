@@ -1,0 +1,1 @@
+{"schema":"mythos-skills.operations.v1","operations":[{"name":"prepare-review","references":["references/workflow.md"]}]}

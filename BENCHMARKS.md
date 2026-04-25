@@ -30,6 +30,23 @@ These are the first famous skills to benchmark. Baseline public data comes from 
 | Superpowers `systematic-debugging` | Famous workflow skill | Long workflow file | <=55 lines entry + refs | Faster trigger, same root-cause discipline |
 | Superpowers `test-driven-development` | Famous workflow skill | Long workflow file | <=55 lines entry + refs | Faster trigger, same TDD enforcement |
 
+## First Batch Status
+
+| Skill | Package | Status |
+|---|---|---|
+| Anthropic `skill-creator` | [gallery/famous/anthropic/skill-creator](gallery/famous/anthropic/skill-creator/) | Optimized package added |
+| Anthropic `claude-api` | [gallery/famous/anthropic/claude-api](gallery/famous/anthropic/claude-api/) | Optimized package added |
+| Anthropic `xlsx` | [gallery/famous/anthropic/xlsx](gallery/famous/anthropic/xlsx/) | Optimized package added |
+| Anthropic `pptx` | [gallery/famous/anthropic/pptx](gallery/famous/anthropic/pptx/) | Optimized package added |
+| Anthropic `pdf` | [gallery/famous/anthropic/pdf](gallery/famous/anthropic/pdf/) | Optimized package added |
+| Superpowers `systematic-debugging` | [gallery/famous/superpowers/systematic-debugging](gallery/famous/superpowers/systematic-debugging/) | Optimized package added |
+| Superpowers `test-driven-development` | [gallery/famous/superpowers/test-driven-development](gallery/famous/superpowers/test-driven-development/) | Optimized package added |
+| Superpowers `writing-plans` | [gallery/famous/superpowers/writing-plans](gallery/famous/superpowers/writing-plans/) | Optimized package added |
+| Superpowers `requesting-code-review` | [gallery/famous/superpowers/requesting-code-review](gallery/famous/superpowers/requesting-code-review/) | Optimized package added |
+| Superpowers `brainstorming` | [gallery/famous/superpowers/brainstorming](gallery/famous/superpowers/brainstorming/) | Optimized package added |
+| Superpowers `verification-before-completion` | [gallery/famous/superpowers/verification-before-completion](gallery/famous/superpowers/verification-before-completion/) | Optimized package added |
+| Superpowers `using-git-worktrees` | [gallery/famous/superpowers/using-git-worktrees](gallery/famous/superpowers/using-git-worktrees/) | Optimized package added |
+
 ## Current Mythos Creator Comparison
 
 The current Mythos `engine/skill-creator/SKILL.md` is a scaffold, not yet feature-parity with the Anthropic skill creator. It proves the shape:

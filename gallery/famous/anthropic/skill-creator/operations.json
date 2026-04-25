@@ -1,0 +1,1 @@
+{"schema":"mythos-skills.operations.v1","operations":[{"name":"create-skill","references":["references/workflow.md"]},{"name":"benchmark-skill","references":["BENCHMARK.md"]}]}

@@ -4,13 +4,17 @@ This repository may aggregate, compare, or derive content from third-party skill
 
 ## Active Sources
 
-No third-party skill content has been imported yet.
+| Source | URL | License | Location |
+|---|---|---|---|
+| Anthropic skills | https://github.com/anthropics/skills | Source-available/proprietary terms | `gallery/famous/anthropic/` |
+| Superpowers | https://github.com/obra/superpowers | MIT | `gallery/famous/superpowers/` |
 
-When third-party content is added, list it here:
+## Import Policy
 
-| Source | URL | License | Copyright | Location |
-|---|---|---|---|---|
-| Example | https://github.com/example/repo | MIT | Copyright holder | `gallery/from-example/` |
+The first famous gallery batch is intentionally minimal:
+
+- Anthropic packages are clean-room optimized versions. They record source metadata and public baselines, but do not copy proprietary source text.
+- Superpowers packages link to the MIT source and preserve attribution. Full source text is not copied into this initial batch.
 
 ## Requirements
 

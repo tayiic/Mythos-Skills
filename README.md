@@ -203,4 +203,23 @@ Start with [CONTRIBUTING.md](CONTRIBUTING.md), then submit:
 
 Original Mythos-Skills content is released under the [MIT License](LICENSE). Third-party content keeps its original license and attribution. See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).
 
+## Quick Links
+
+Use these when you want the shortest path instead of browsing the whole repository.
+
+| Need | Link |
+|---|---|
+| Download everything | [main.zip](https://github.com/tayiic/Mythos-Skills/archive/refs/heads/main.zip) |
+| Download v002 branch | [v002.zip](https://github.com/tayiic/Mythos-Skills/archive/refs/heads/v002.zip) |
+| One-file creator | [skill-creator-lite/SKILL.md](engine/skill-creator-lite/SKILL.md) |
+| Standard creator folder | [engine/skill-creator](engine/skill-creator/) |
+| Famous skill gallery | [gallery/famous](gallery/famous/) |
+| Benchmarks | [BENCHMARKS.md](BENCHMARKS.md) |
+| Gallery plan | [GALLERY_PLAN.md](GALLERY_PLAN.md) |
+| Anthropic skill-creator optimized | [gallery/famous/anthropic/skill-creator](gallery/famous/anthropic/skill-creator/) |
+| Anthropic claude-api optimized | [gallery/famous/anthropic/claude-api](gallery/famous/anthropic/claude-api/) |
+| Anthropic xlsx optimized | [gallery/famous/anthropic/xlsx](gallery/famous/anthropic/xlsx/) |
+| Superpowers systematic-debugging optimized | [gallery/famous/superpowers/systematic-debugging](gallery/famous/superpowers/systematic-debugging/) |
+| Superpowers TDD optimized | [gallery/famous/superpowers/test-driven-development](gallery/famous/superpowers/test-driven-development/) |
+
 **Star this repository if you believe skills should be engineered, not merely written.**
