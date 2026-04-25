@@ -2,6 +2,8 @@
 
 > The next layer of AI agent work: skill engineering.
 
+Languages: [English](README.md) | [简体中文](README.zh-CN.md)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/tayiic/Mythos-Skills?style=social)](https://github.com/tayiic/Mythos-Skills/stargazers)
 [![Forks](https://img.shields.io/github/forks/tayiic/Mythos-Skills?style=social)](https://github.com/tayiic/Mythos-Skills/forks)
@@ -16,6 +18,18 @@ Mythos-Skills is built around a higher-level claim:
 **Skills are not prompt files. They are reusable engineering units.**
 
 This repository distills that idea into 8 iron principles, a principle-driven creation engine, production-grade examples, and a before/after gallery that shows how weak skills become reliable ones.
+
+## Show Me The Proof
+
+The core promise is measurable improvement, not nicer wording. The first gallery entries will optimize well-known skills and show the exact delta:
+
+| Case | Before | After | Proof |
+|---|---|---|---|
+| TDD workflow | Long activation file, mixed process and detail | Compact trigger layer plus references | Activation lines and token estimate |
+| Debugging workflow | Hidden cross-skill assumptions | Self-contained package | Portability checklist |
+| Planning workflow | Generic "what it does" description | Trigger-first description | Activation rubric |
+
+Each case should include `ORIGINAL.md`, optimized `SKILL.md`, `DIFF.md`, local `references/`, and an improvement table. The gallery is where Mythos-Skills earns trust.
 
 ## Why This Exists
 
@@ -109,7 +123,9 @@ The engine should guide the skill through P1-P8 instead of leaving the agent to 
 
 ## Gallery: Before To After
 
-The gallery is the proof surface. Each optimized skill should include:
+The gallery is the proof surface. It is intentionally designed for famous or widely copied skills first, because trust grows faster when the comparison is recognizable.
+
+Each optimized skill should include:
 
 - `ORIGINAL.md`: the source skill or prompt before optimization.
 - `SKILL.md`: the P1-P8 version, kept compact.
@@ -118,6 +134,14 @@ The gallery is the proof surface. Each optimized skill should include:
 - `operations.json`: machine-readable operation index when useful.
 
 This makes optimization reviewable instead of vibes-based.
+
+Recommended first cases:
+
+- A TDD workflow skill.
+- A systematic debugging skill.
+- A planning or implementation workflow skill.
+
+The goal is not to claim magic. The goal is to show smaller activation context, clearer triggers, fewer hidden dependencies, and better failure-mode coverage.
 
 ## Works With
 
