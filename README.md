@@ -19,6 +19,8 @@ Mythos-Skills is built around a higher-level claim:
 
 This repository distills that idea into 8 iron principles, a principle-driven creation engine, production-grade examples, and a before/after gallery that shows how weak skills become reliable ones.
 
+Built for searches and adoption around agent skills, Claude Code skills, Codex skills, Cursor skills, Gemini CLI skills, context engineering, prompt engineering, and AI coding workflows.
+
 ## Show Me The Proof
 
 The core promise is measurable improvement, not nicer wording. The first gallery entries target famous skills and show the exact delta.
@@ -48,6 +50,37 @@ Mythos treats an optimization as successful only when it aims to improve or pres
 | Token cost | Smaller always-loaded context and lower total task tokens where possible |
 
 If a skill becomes smaller but slower, less accurate, or easier to mis-trigger, that is not a real win. Before claiming "optimized," each package should document both the compression gains and the non-regression checks.
+
+## Why Expert Teams Adopt
+
+Top teams usually do not adopt a repository because it sounds smart. They adopt when it reduces risk, standardizes quality, and gives them something they can evaluate.
+
+Mythos-Skills is strongest when it gives them:
+
+| Adoption reason | Why it matters |
+|---|---|
+| Benchmark-first optimization | Experts want proof, not taste |
+| Non-regression rules | Smaller prompts are useless if quality drops |
+| Cross-agent portability | One skill pattern that works across Claude Code, Codex, Cursor, Gemini CLI, and similar tools |
+| Minimal and standard entry points | Teams can start with one file, then scale to full structure |
+| Famous-skill comparisons | It is easier to trust a rewrite when the baseline is already well known |
+| Legal clarity | Clean-room handling for source-available content lowers adoption risk |
+
+For serious adoption, the next layer should be a small public eval harness and a compatibility matrix that shows which skills were checked on which platforms.
+
+## Why Individual Developers Care
+
+Most stars will not come from platform teams. They will come from ordinary developers, PMs, designers, analysts, and operators who feel the same pain every day:
+
+- the agent forgets instructions after a few turns
+- copied skills break because they depend on hidden files
+- long prompt files waste context and money
+- the wrong workflow triggers at the wrong time
+- nobody can tell whether an AI workflow is actually better or just louder
+
+The mass-market promise should stay simple:
+
+**Copy one file, or one skill folder, and get a workflow that is smaller, clearer, and easier to trust.**
 
 ## Complexity Escape Hatch
 
@@ -189,7 +222,7 @@ Optimized famous skills belong in `gallery/famous/<source-slug>/<skill-slug>/`. 
 
 Mythos-Skills is designed for any agent platform that supports skill-like behavior:
 
-Claude Code, Codex, Cursor, OpenCode, Gemini CLI, custom agent harnesses, and internal coding agents.
+Claude Code, Codex, Cursor, OpenCode, Gemini CLI, GitHub Copilot, custom agent harnesses, and internal coding agents.
 
 ## Naming And Affiliation
 

@@ -19,6 +19,8 @@ Mythos-Skills 的核心判断是：
 
 这个仓库用 8 条铁律、原则驱动的 `skill-creator`、生产级示例和 before/after gallery，把 skill 编写从“凭感觉写提示词”提升到“可审查、可迁移、可复用的工程方法”。
 
+它也覆盖了一组对 GitHub 搜索和用户认知都很重要的关键词：agent skills、Claude Code、Codex、Cursor、Gemini CLI、context engineering、prompt engineering、AI coding workflow。
+
 ## 先看证据
 
 这个项目最重要的卖点不是口号，而是可验证优化。首批 gallery 会瞄准最有名、最容易被用户理解的 skills，把优化前后的数据直接摆出来。
@@ -48,6 +50,39 @@ Mythos-Skills 的核心判断是：
 | Token 成本 | 常驻上下文更小、总任务 token 尽可能更低 |
 
 如果一个 skill 只是更小，但变慢、变弱，或者更容易误触发，那不算真正优化。每个案例都应该同时写清楚压缩收益和非降级检查。
+
+## 为什么顶尖团队会采用
+
+真正强的团队不会因为一个项目“听起来先进”就采用，它必须同时降低风险、统一质量标准、还能被验证。
+
+Mythos-Skills 最有吸引力的点在这里：
+
+| 采用理由 | 为什么重要 |
+|---|---|
+| Benchmark-first 优化 | 专家更看重证据，不看口号 |
+| 非降级规则 | prompt 更小但能力掉了，没有意义 |
+| 跨 Agent 可迁移 | Claude Code、Codex、Cursor、Gemini CLI 都能复用同一套路 |
+| 极简入口和标准入口并存 | 可以先从一个文件开始，再扩展到完整结构 |
+| 著名 skill 对比 | baseline 越知名，优化越容易建立信任 |
+| 法律边界清楚 | 对 source-available 内容做 clean-room 处理，降低采用风险 |
+
+如果要更打动专家，下一层应该补一个小型公开 eval harness 和平台兼容矩阵，明确每个 famous skill 在哪些平台做过验证。
+
+## 为什么普通程序员和白领会收藏
+
+大多数 star 不会来自平台专家，而会来自日常使用 AI 的开发者、产品、设计、分析、运营。
+
+他们的痛点其实很一致：
+
+- agent 对话几轮后就忘记规则
+- 复制 skill 之后因为隐藏依赖直接坏掉
+- prompt 太长，既贵又慢
+- 错误 workflow 在错误时机被触发
+- 没人说得清 AI workflow 到底是真的更好，还是只是更吵
+
+对大众用户，最有力的宣传语应该非常直接：
+
+**复制一个文件，或一个 skill 文件夹，就能得到一个更小、更清楚、更容易信任的工作流。**
 
 ## 太复杂？直接用极简版
 
@@ -177,7 +212,7 @@ gallery 是这个项目的证明面。优先优化知名或被广泛复制的 sk
 
 Mythos-Skills 设计为适配任何支持 skill-like 行为的 agent 平台：
 
-Claude Code、Codex、Cursor、OpenCode、Gemini CLI、自定义 agent harness、团队内部 coding agent。
+Claude Code、Codex、Cursor、OpenCode、Gemini CLI、GitHub Copilot、自定义 agent harness、团队内部 coding agent。
 
 ## 命名和免责声明
 
