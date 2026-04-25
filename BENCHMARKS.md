@@ -2,7 +2,7 @@
 
 This page is the evidence board for Mythos-Skills.
 
-The goal is not to claim magic. The goal is to make every optimization reviewable: before size, after size, activation context, portability, trigger quality, and measured task results.
+The goal is not to claim magic. The goal is to make every optimization reviewable: before size, after size, activation context, portability, trigger quality, measured task results, and non-regression in speed and understanding.
 
 ## Measurement Method
 
@@ -14,13 +14,32 @@ The goal is not to claim magic. The goal is to make every optimization reviewabl
 | Trigger quality | Whether description says when to use it | P5 review rubric |
 | Portability | Whether the folder works when copied alone | P3 checklist |
 | Runtime speed | Task duration in evals | `duration_ms` from benchmark runs |
+| First correct action latency | How quickly the agent gets onto the right workflow | time until first correct routed step |
 | Task token cost | Total run cost in evals | `total_tokens` from benchmark runs |
+| Eval pass rate | Whether the optimized skill still solves the task set | passed evals / total evals |
+| Understanding drift | Whether the optimized trigger changes intended behavior | compare routed workflow, chosen tools, and failure pattern handling |
+| Behavior parity | Whether core workflow guarantees still hold | checklist against original intent |
 
 All final claims must be backed by an `ORIGINAL.md`, optimized `SKILL.md`, `DIFF.md`, and benchmark notes.
 
+## Non-Regression Rule
+
+Smaller is not enough.
+
+An optimization is only a real win if it improves activation cost without introducing meaningful regression in:
+
+- task completion quality
+- time to first correct action
+- mean duration
+- total task tokens
+- trigger correctness
+- workflow guarantees such as TDD discipline, root-cause proof, or verification gates
+
+If a skill is smaller but slower, lower quality, or easier to mis-trigger, the package should say so explicitly instead of marketing it as a pure upgrade.
+
 ## Headline Board
 
-These are the first famous skills to benchmark. Baseline public data comes from GitHub pages and public skill indexes. Mythos targets are release gates for the first optimized pass, not final claims until the optimized folders land in `gallery/famous/`.
+These are the first famous skills to benchmark. Baseline public data comes from GitHub pages and public skill indexes. Mythos targets are release gates for the first optimized pass, not final claims until the optimized folders land in `gallery/famous/` and pass non-regression checks.
 
 | Famous skill | Source signal | Baseline activation | Mythos target | Expected impact |
 |---|---:|---:|---:|---|
@@ -59,6 +78,20 @@ The current Mythos `engine/skill-creator/SKILL.md` is a scaffold, not yet featur
 
 The full benchmark target is to preserve useful creation behavior while keeping the always-loaded entry below 55 lines.
 
+## What We Still Need To Prove
+
+The current gallery already proves packaging discipline and activation-size reduction. It does not yet prove full runtime non-regression for every skill.
+
+For each famous package, the next benchmark pass should record:
+
+| Question | What counts as evidence |
+|---|---|
+| Did speed regress? | compare mean duration and first correct action latency |
+| Did quality regress? | compare eval pass rate or task-quality rubric |
+| Did the agent misunderstand the smaller skill? | compare routed workflow and decision pattern |
+| Did total token cost actually drop? | compare run-level total token usage, not just `SKILL.md` size |
+| Did core guarantees survive? | checklist for TDD, debugging proof, verification, safety, or document integrity |
+
 ## Required Case Format
 
 Every optimized famous skill must include this table in its `DIFF.md`:
@@ -72,8 +105,11 @@ Every optimized famous skill must include this table in its `DIFF.md`:
 | Trigger rubric score | TBD | TBD | TBD |
 | Portability checklist | TBD | Pass | TBD |
 | Eval pass rate | TBD | TBD | TBD |
+| First correct action latency | TBD | TBD | TBD |
 | Mean duration | TBD | TBD | TBD |
 | Mean total tokens | TBD | TBD | TBD |
+| Understanding drift | TBD | TBD | TBD |
+| Behavior parity | TBD | TBD | TBD |
 
 ## Source Notes
 

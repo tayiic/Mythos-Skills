@@ -33,6 +33,22 @@ The core promise is measurable improvement, not nicer wording. The first gallery
 
 See [BENCHMARKS.md](BENCHMARKS.md) for the measurement board. Each case must include `ORIGINAL.md`, optimized `SKILL.md`, `DIFF.md`, local `references/`, and benchmark notes. The gallery is where Mythos-Skills earns trust.
 
+## Smaller Must Not Mean Weaker
+
+Token reduction is only one metric. Users also care about whether optimization slows the agent down, drops capability, or causes interpretation drift.
+
+Mythos treats an optimization as successful only when it aims to improve or preserve all of these:
+
+| Concern | What we check |
+|---|---|
+| Speed | Mean task duration and time to first correct action |
+| Capability | Eval pass rate and task completion quality |
+| Understanding drift | Whether the optimized trigger routes the agent to the same intended workflow |
+| Reliability | Fewer hidden dependencies, clearer gotchas, better verification gates |
+| Token cost | Smaller always-loaded context and lower total task tokens where possible |
+
+If a skill becomes smaller but slower, less accurate, or easier to mis-trigger, that is not a real win. Before claiming "optimized," each package should document both the compression gains and the non-regression checks.
+
 ## Complexity Escape Hatch
 
 You do not need to adopt the whole repository.
@@ -153,6 +169,7 @@ Each optimized skill should include:
 - `ORIGINAL.md`: the source skill or prompt before optimization.
 - `SKILL.md`: the P1-P8 version, kept compact.
 - `DIFF.md`: what changed, why it changed, and which principle required it.
+- `BENCHMARK.md`: activation, speed, quality, and drift checks.
 - `references/`: details loaded on demand.
 - `operations.json`: machine-readable operation index when useful.
 
@@ -164,7 +181,7 @@ Recommended first cases:
 - Superpowers `systematic-debugging`, `test-driven-development`, `writing-plans`, `requesting-code-review`, `brainstorming`.
 - Playwright/browser automation and other widely copied practical skills.
 
-The goal is not to claim magic. The goal is to show smaller activation context, clearer triggers, fewer hidden dependencies, and better failure-mode coverage.
+The goal is not to claim magic. The goal is to show smaller activation context, clearer triggers, fewer hidden dependencies, better failure-mode coverage, and no meaningful regression in task quality.
 
 Optimized famous skills belong in `gallery/famous/<source-slug>/<skill-slug>/`. See [GALLERY_PLAN.md](GALLERY_PLAN.md).
 
