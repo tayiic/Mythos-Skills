@@ -1,0 +1,14 @@
+# Root workspace is local-only. The public repository is managed separately.
+/pub/
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+~$*
