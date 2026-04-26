@@ -230,6 +230,39 @@ Mythos means a foundational narrative, origin story, or body of principles. This
 
 Mythos-Skills is not affiliated with, endorsed by, or connected to Anthropic or any other model provider. See [DISCLAIMER.md](DISCLAIMER.md).
 
+## ⚡ Early Supporters
+
+**First 100 stargazers get:**
+- Free 1-on-1 AI coding workflow consultation
+- Priority access to new skills before public release
+- Direct Q&A with the maintainer (X DM or GitHub Discussion)
+
+⭐ Star now → DM me on [X](https://x.com/tayiic) to claim
+
+## 🎯 Star Milestones
+
+| Stars | Unlock |
+|-------|--------|
+| 100 | `skill-creator-lite` single-file edition |
+| 500 | Video walkthrough: P1-P8 in practice |
+| 1,000 | `plan-forge` skill (Tier 1, early access) |
+| 2,500 | Chinese deep-dive series (8 articles) |
+| 5,000 | Public eval harness & compatibility matrix |
+
+Your star directly shapes what gets built next.
+
+## 🙏 Supporters
+
+<!-- Stargazers Hall of Fame will be auto-generated -->
+
+### Sponsors
+
+Support this project via [GitHub Sponsors](https://github.com/sponsors/tayiic)
+
+| Sponsor | Tier |
+|---------|------|
+| *Your name here* | ☕ Coffee |
+
 ## Roadmap
 
 - Publish the complete P1-P8 principles document.
@@ -272,4 +305,4 @@ Use these when you want the shortest path instead of browsing the whole reposito
 | Superpowers systematic-debugging optimized | [gallery/famous/superpowers/systematic-debugging](gallery/famous/superpowers/systematic-debugging/) |
 | Superpowers TDD optimized | [gallery/famous/superpowers/test-driven-development](gallery/famous/superpowers/test-driven-development/) |
 
-**Star this repository if you believe skills should be engineered, not merely written.**
+**Star this repository if you believe skills should be forged, not just written. ⚡**

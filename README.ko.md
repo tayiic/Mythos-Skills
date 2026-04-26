@@ -47,3 +47,38 @@ gallery/famous/<source-slug>/<skill-slug>/
 ```
 
 See [GALLERY_PLAN.md](GALLERY_PLAN.md).
+
+## ⚡ Early Supporters
+
+**First 100 stargazers get:**
+- Free 1-on-1 AI coding workflow consultation
+- Priority access to new skills before public release
+- Direct Q&A with the maintainer (X DM or GitHub Discussion)
+
+⭐ Star now → DM me on [X](https://x.com/tayiic) to claim
+
+## 🎯 Star Milestones
+
+| Stars | Unlock |
+|-------|--------|
+| 100 | `skill-creator-lite` single-file edition |
+| 500 | Video walkthrough: P1-P8 in practice |
+| 1,000 | `plan-forge` skill (Tier 1, early access) |
+| 2,500 | Chinese deep-dive series (8 articles) |
+| 5,000 | Public eval harness & compatibility matrix |
+
+Your star directly shapes what gets built next.
+
+## 🙏 Supporters
+
+<!-- Stargazers Hall of Fame will be auto-generated -->
+
+### Sponsors
+
+Support this project via [GitHub Sponsors](https://github.com/sponsors/tayiic)
+
+| Sponsor | Tier |
+|---------|------|
+| *Your name here* | ☕ Coffee |
+
+**Skill 은 쌓는 것이 아니라 단련하는 것입니다. Star 를 부탁드립니다 ⚡**
