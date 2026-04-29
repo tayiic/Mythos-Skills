@@ -145,6 +145,7 @@ You get:
 - Production-grade example skills with a three-layer structure.
 - A gallery of optimized community skills with original, diff, and token-impact notes.
 - A command-safety model for skills that can run real operations.
+- Public rule documents that explain command safety and protected-file boundaries.
 
 ## Repository Map
 
@@ -297,6 +298,9 @@ Use these when you want the shortest path instead of browsing the whole reposito
 | One-file creator | [skill-creator-lite/SKILL.md](engine/skill-creator-lite/SKILL.md) |
 | Standard creator folder | [engine/skill-creator](engine/skill-creator/) |
 | Famous skill gallery | [gallery/famous](gallery/famous/) |
+| Security model | [security/README.md](security/README.md) |
+| Command rules | [security/COMMAND_RULES.md](security/COMMAND_RULES.md) |
+| Global constraints | [security/GLOBAL_CONSTRAINTS.md](security/GLOBAL_CONSTRAINTS.md) |
 | Benchmarks | [BENCHMARKS.md](BENCHMARKS.md) |
 | Gallery plan | [GALLERY_PLAN.md](GALLERY_PLAN.md) |
 | Anthropic skill-creator optimized | [gallery/famous/anthropic/skill-creator](gallery/famous/anthropic/skill-creator/) |
