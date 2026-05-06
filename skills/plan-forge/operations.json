@@ -1,0 +1,28 @@
+{
+  "name": "plan-forge",
+  "version": "1.0",
+  "description": "Forge vague ideas into bite-sized, executable action plans",
+  "triggers": [
+    "需求模糊需要澄清",
+    "任务复杂度超过单次实现",
+    "需要将大目标拆解为可执行步骤",
+    "用户说'帮我规划一下'",
+    "用户说'这个任务太大了'"
+  ],
+  "commands": {
+    "create_plan": "Read .plan/plan.md if exists, otherwise create new plan",
+    "validate_plan": "Check plan against quality criteria (≤7 tasks, atomic, specific, testable)",
+    "next_task": "Read .plan/plan.md, identify first unchecked task, output its details",
+    "split_plan": "When plan exceeds 7 tasks, split into .plan/subplans/ with master plan"
+  },
+  "references": [
+    {
+      "ref": "references/plan_quality_criteria.md",
+      "description": "What makes a plan good: atomicity, specificity, testability, independence, boundedness"
+    },
+    {
+      "ref": "references/gotchas.md",
+      "description": "Common planning anti-patterns and how to avoid them"
+    }
+  ]
+}
