@@ -1,14 +1,50 @@
-# Root workspace is local-only. The public repository is managed separately.
-/pub/
-
-# OS and editor noise
+# OS
 .DS_Store
 Thumbs.db
+
+# Editors
 .idea/
 .vscode/
+*.swp
+*.swo
 
-# Logs and temporary files
+# Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Node
+node_modules/
+dist/
+build/
+coverage/
+
+# Local agent state
+.codex/
+.claude/
+.cursor/
+.trae/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Root workspace is local-only
+/pub/
+
+# Temporary files
 *.tmp
 *.temp
 ~$*
