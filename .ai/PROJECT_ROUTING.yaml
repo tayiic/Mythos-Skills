@@ -1,0 +1,14 @@
+schema_version: 1
+project: Mythos-Skills
+activated: "2026-09-10"
+routing_version: v1
+authority: "X:\\workspace\\AIStandard\\codex_standard\\universal\\ai_model_routing.md"
+risk_overrides:
+  publication_content: R2
+  methodology_change: R2
+required_review: []
+forbidden_auto_actions:
+  - '方法论断言无来源引用'
+task_examples:
+  - {desc: 'skill 文档撰写', expect: 'C1/R1'}
+  - {desc: '方法论修订', expect: 'C2/R2'}
