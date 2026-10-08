@@ -2,7 +2,7 @@
 
 This document describes the public command-safety model behind Mythos-Skills.
 
-It is adapted from the stricter WorkflowTemplate ruleset, but simplified for external readers and skill authors.
+It is adapted from the stricter AIStandard ruleset, but simplified for external readers and skill authors.
 
 ## Core Command Shape
 

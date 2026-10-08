@@ -36,7 +36,7 @@ AI Coding Agent 的 Skill 生态正在爆发式增长：
 
 ### 1.2 我们的优势
 
-我们不是从零开始。在 WorkflowTemplate 项目中已经沉淀了：
+我们不是从零开始。在 AIStandard 项目中已经沉淀了：
 
 | 资产 | 状态 | 来源 |
 |------|------|------|
@@ -269,7 +269,7 @@ Mythos-Skills/
 └── docs/                             # ═══ 详细文档 ═══
     ├── codex_rules_setup_guide.md    # 可迁移的安全规则配置指南
     ├── PROJECT_BLUEPRINT.md          # 本文档 (项目蓝图)
-    └── MIGRATION_CHECKLIST.md        # 从 WorkflowTemplate 迁移检查清单
+    └── MIGRATION_CHECKLIST.md        # 从 AIStandard 迁移检查清单
 ```
 
 ### 4.2 各模块职责
@@ -570,7 +570,7 @@ Principles distilled from:
 
 ## 九、迁移检查清单
 
-### 9.1 从 WorkflowTemplate 迁移的内容
+### 9.1 从 AIStandard 迁移的内容
 
 | 文件 | 源路径 | 目标路径 | 状态 |
 |------|--------|---------|------|
@@ -603,7 +603,7 @@ Principles distilled from:
 
 ### 9.3 迁移注意事项
 
-1. **去除内部引用**: 所有指向 WorkflowTemplate 内部路径的链接需要更新为相对路径
+1. **去除内部引用**: 所有指向 AIStandard 内部路径的链接需要更新为相对路径
 2. **去除 GLOBAL_SKILL_PROTOCOL.md 引用**: skill-creator 不再引用全局协议（已改为自包含）
 3. **统一路径风格**: 所有 operations.json 中的 ref 路径使用相对路径 (`references/xxx.md`)
 4. **版权清理**: 确认所有原创内容的版权归属

@@ -1,0 +1,37 @@
+{
+  "project_name": "mythos-skills",
+  "description": "Mythos-Skills methodology and publication workspace for AI skill engineering.",
+  "stacks": [
+    "nodejs"
+  ],
+  "runtime": {
+    "ports": {}
+  },
+  "boundaries": {
+    "scope": "Repository governance, publication workflow docs, and shared protocol sync.",
+    "out_of_scope": [
+      "Public release content rewrites",
+      "Remote Git publishing",
+      "Methodology changes without explicit review"
+    ],
+    "protected_paths": [
+      "project-preset.json",
+      "pub/"
+    ]
+  },
+  "ides": [
+    "codex"
+  ],
+  "primary_ide": "codex",
+  "codex": {
+    "profile": "minimal",
+    "constitution_tier": 1
+  },
+  "standard_version": "3.8.1",
+  "sync": {
+    "source": "X:\\workspace\\AIStandard",
+    "role": "consumer",
+    "mode": "rules_only",
+    "protected_files": []
+  }
+}
